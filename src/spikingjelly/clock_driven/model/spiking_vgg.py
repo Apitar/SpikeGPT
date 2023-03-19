@@ -1,6 +1,6 @@
 import torch
 import torch.nn as nn
-from spikingjelly.clock_driven import functional, neuron
+from src.spikingjelly.clock_driven import functional, neuron
 try:
     from torchvision.models.utils import load_state_dict_from_url
 except ImportError:

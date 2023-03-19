@@ -1,10 +1,10 @@
 import torch
 import torchvision
 import torch.nn as nn
-import spikingjelly
-from spikingjelly.clock_driven import ann2snn
+import src.spikingjelly
+from src.spikingjelly.clock_driven import ann2snn
 from tqdm import tqdm
-from spikingjelly.clock_driven.ann2snn.sample_models import mnist_cnn
+from src.spikingjelly.clock_driven.ann2snn.sample_models import mnist_cnn
 import numpy as np
 import matplotlib.pyplot as plt
 

@@ -1,8 +1,8 @@
 import torch
 import torchvision
 from tqdm import tqdm
-import spikingjelly.clock_driven.ann2snn as ann2snn
-from spikingjelly.clock_driven.ann2snn.sample_models import cifar10_resnet
+import src.spikingjelly.clock_driven.ann2snn as ann2snn
+from src.spikingjelly.clock_driven.ann2snn.sample_models import cifar10_resnet
 
 
 def val(net, device, data_loader, T=None):

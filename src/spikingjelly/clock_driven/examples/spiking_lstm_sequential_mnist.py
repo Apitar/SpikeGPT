@@ -2,7 +2,7 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import numpy as np
-from spikingjelly.clock_driven import rnn
+from src.spikingjelly.clock_driven import rnn
 from torch.utils.tensorboard import SummaryWriter
 import sys
 if sys.platform != 'win32':

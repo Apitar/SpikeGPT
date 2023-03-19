@@ -5,7 +5,7 @@ import torch.nn.functional as F
 import torch.utils.data as data
 import torchvision
 import numpy as np
-from spikingjelly.clock_driven import neuron, encoding, functional
+from src.spikingjelly.clock_driven import neuron, encoding, functional
 from torch.utils.tensorboard import SummaryWriter
 from tqdm import tqdm
 

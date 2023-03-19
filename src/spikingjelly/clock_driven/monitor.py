@@ -1,10 +1,10 @@
 import torch
 import numpy as np
 from torch import nn
-from spikingjelly.clock_driven import neuron
+from src.spikingjelly.clock_driven import neuron
 
 try:
-    from spikingjelly.cext import neuron as cext_neuron
+    from src.spikingjelly.cext import neuron as cext_neuron
 except ImportError:
     cext_neuron = None
 

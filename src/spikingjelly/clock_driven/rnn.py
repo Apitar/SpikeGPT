@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-from spikingjelly.clock_driven import surrogate, layer
+from src.spikingjelly.clock_driven import surrogate, layer
 import math
 
 def bidirectional_rnn_cell_forward(cell: nn.Module, cell_reverse: nn.Module, x: torch.Tensor,
@@ -18,7 +18,7 @@ def bidirectional_rnn_cell_forward(cell: nn.Module, cell_reverse: nn.Module, x: 
         否则 ``shape = [states_num, batch_size, hidden_size]``
     :type states: torch.Tensor
     :param states_reverse: 反向RNN cell的起始状态
-        若RNN cell只有单个隐藏状态，则 ``shape = [batch_size, hidden_size]`` ；
+        若RNN cell只有单个隐藏状态，则 ``shape = [batch_size, hFidden_size]`` ；
         否则 ``shape = [states_num, batch_size, hidden_size]``
     :type states: torch.Tensor
     :return: y, ss, ss_r

@@ -1,7 +1,7 @@
 import torch
 import torch.nn as nn
 import torch.nn.functional as F
-import spikingjelly.cext.functional
+import src.spikingjelly.cext.functional
 import warnings
 import math
 import numpy as np
@@ -65,9 +65,9 @@ class SparseLinear(nn.Linear):
     '''
     def forward(self, sparse: torch.Tensor) -> torch.Tensor:
         if self.bias is None:
-            return spikingjelly.cext.functional.sparse_mm_dense(sparse, self.weight.t())
+            return src.spikingjelly.cext.functional.sparse_mm_dense(sparse, self.weight.t())
         else:
-            return spikingjelly.cext.functional.sparse_mm_dense(sparse, self.weight.t()) + self.bias
+            return src.spikingjelly.cext.functional.sparse_mm_dense(sparse, self.weight.t()) + self.bias
 
 class AutoSparseLinear(nn.Linear):
     def __init__(self, in_features: int, out_features: int, bias: bool = True, in_spikes: bool = False):
@@ -154,9 +154,9 @@ class AutoSparseLinear(nn.Linear):
             return F.linear(x, self.weight, self.bias)
         else:
             if self.bias is None:
-                return spikingjelly.cext.functional.sparse_mm_dense(x, self.weight)
+                return src.spikingjelly.cext.functional.sparse_mm_dense(x, self.weight)
             else:
-                return spikingjelly.cext.functional.sparse_mm_dense(x, self.weight) + self.bias    
+                return src.spikingjelly.cext.functional.sparse_mm_dense(x, self.weight) + self.bias
 
     def extra_repr(self) -> str:
         return f'in_features={self.in_features}, out_features={self.out_features}, bias={self.bias is not None}, critical_sparsity={self.critical_sparsity}'

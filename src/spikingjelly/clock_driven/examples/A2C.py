@@ -10,7 +10,7 @@ import torch.nn.functional as F
 from torch.distributions import Categorical
 
 from torch.utils.tensorboard import SummaryWriter
-from spikingjelly.clock_driven.examples.common.multiprocessing_env import SubprocVecEnv
+from src.spikingjelly.clock_driven.examples.common.multiprocessing_env import SubprocVecEnv
 
 if __name__ == '__main__':
     # Use CUDA

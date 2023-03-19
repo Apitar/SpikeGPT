@@ -1,5 +1,5 @@
 from typing import Callable, Dict,  Optional, Tuple
-import spikingjelly.datasets as sjds
+import src.spikingjelly.datasets as sjds
 from torchvision.datasets.utils import extract_archive
 import os
 import multiprocessing

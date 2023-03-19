@@ -2,8 +2,8 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 from torch.cuda import amp
-from spikingjelly.clock_driven import functional, surrogate, layer, neuron
-from spikingjelly.datasets.dvs128_gesture import DVS128Gesture
+from src.spikingjelly.clock_driven import functional, surrogate, layer, neuron
+from src.spikingjelly.datasets.dvs128_gesture import DVS128Gesture
 from torch.utils.data import DataLoader
 from torch.utils.tensorboard import SummaryWriter
 import time

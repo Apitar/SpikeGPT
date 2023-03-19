@@ -2,9 +2,9 @@ import torch
 import torch.nn as nn
 import torch.nn.functional as F
 import torchvision.datasets
-from spikingjelly.clock_driven.model import train_classify
-from spikingjelly.clock_driven import neuron, surrogate, layer
-from spikingjelly.clock_driven.functional import seq_to_ann_forward
+from src.spikingjelly.clock_driven.model import train_classify
+from src.spikingjelly.clock_driven import neuron, surrogate, layer
+from src.spikingjelly.clock_driven.functional import seq_to_ann_forward
 from torchvision import transforms
 import os, argparse
 _seed_ = 2020

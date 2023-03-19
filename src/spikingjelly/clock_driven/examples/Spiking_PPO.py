@@ -10,9 +10,9 @@ import torch.nn.functional as F
 from torch.distributions import Normal
 
 from torch.utils.tensorboard import SummaryWriter
-from spikingjelly.clock_driven.examples.common.multiprocessing_env import SubprocVecEnv
+from src.spikingjelly.clock_driven.examples.common.multiprocessing_env import SubprocVecEnv
 
-from spikingjelly.clock_driven import neuron, functional
+from src.spikingjelly.clock_driven import neuron, functional
 
 
 # Use CUDA

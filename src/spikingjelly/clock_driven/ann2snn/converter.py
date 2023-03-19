@@ -1,6 +1,6 @@
-from spikingjelly.clock_driven.ann2snn.modules import *
+from src.spikingjelly.clock_driven.ann2snn.modules import *
 from tqdm import tqdm
-from spikingjelly.clock_driven import neuron
+from src.spikingjelly.clock_driven import neuron
 import copy
 
 
